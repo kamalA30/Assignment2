@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="1024.0" style="-fx-background-color: #d1d1cd;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.CreateUserController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="620.0" prefWidth="207.0" styleClass="sidePar" stylesheets="@../../css/admin.css">
+         <children>
+            <Label alignment="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="42.0" prefWidth="162.0" text="Admin Dashboard" textFill="#b8d9f8">
+               <effect>
+                  <Glow level="0.33" />
+               </effect>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="usersManagmentPageBtn" alignment="BASELINE_LEFT" layoutY="186.0" mnemonicParsing="false" onAction="#showUsersManagmentPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItemActive" stylesheets="@../../css/admin.css" text="Users">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="accountsPageBtn" alignment="BASELINE_LEFT" layoutY="235.0" mnemonicParsing="false" onAction="#showAccountsPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItem" stylesheets="@../../css/admin.css" text="Accounts">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="operationsPageBtn" alignment="BASELINE_LEFT" layoutY="284.0" mnemonicParsing="false" onAction="#showOperationsPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItem" stylesheets="@../../css/admin.css" text="Operations">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#000000b2" height="28.29" radius="36.225" width="118.61" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="228.0" layoutY="64.0" prefHeight="506.0" prefWidth="408.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <Button fx:id="saveNewUserBtn" layoutX="75.0" layoutY="387.0" mnemonicParsing="false" onAction="#saveNewUser" prefHeight="42.0" prefWidth="118.0" styleClass="saveButton" stylesheets="@../../css/admin.css" text="Save">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelBtn" layoutX="210.0" layoutY="387.0" mnemonicParsing="false" onAction="#cancelUserCreation" prefHeight="42.0" prefWidth="118.0" styleClass="cancelButton" stylesheets="@../../css/admin.css" text="Cancel">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="42.0" layoutY="57.0" prefHeight="42.0" prefWidth="127.0" text="User Name " textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameTF" layoutX="169.0" layoutY="64.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <TextField fx:id="passwordTF" layoutX="169.0" layoutY="106.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <Label layoutX="42.0" layoutY="99.0" prefHeight="42.0" prefWidth="127.0" text="Password " textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailTF" layoutX="169.0" layoutY="148.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <Label layoutX="42.0" layoutY="141.0" prefHeight="42.0" prefWidth="127.0" text="Email " textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="205.0" prefHeight="42.0" prefWidth="127.0" text="Gender" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="254.0" prefHeight="42.0" prefWidth="127.0" text="Role" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <RadioButton layoutX="169.0" layoutY="214.0" mnemonicParsing="false" selected="true" text="Male" textFill="#383560">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="genderGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="263.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Female" textFill="#383560" toggleGroup="$genderGroup">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="263.0" layoutY="263.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Admin" textFill="#383560">
+               <toggleGroup>
+                  <ToggleGroup fx:id="roleGroup" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="169.0" layoutY="263.0" mnemonicParsing="false" selected="true" text="User" textFill="#383560" toggleGroup="$roleGroup">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+      <Label layoutX="233.0" layoutY="13.0" prefHeight="42.0" prefWidth="286.0" text="Users Managment / Create User" textFill="#838383">
+         <effect>
+            <Glow level="0.45" />
+         </effect>
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

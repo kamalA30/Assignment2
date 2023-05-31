@@ -1,0 +1,86 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 29, 2023, 3:59:34 PM
+    Author     : Yahya
+*/
+
+.sidePar{
+    -fx-background-color :   #1c273c;   
+}
+.sideParItem{
+    -fx-background-color :    #1c273c;   
+     -fx-text-fill:#489ef4;
+}
+.sideParItem:hover{
+    -fx-background-color :  #383560;   
+    -fx-text-fill: #726bfa;
+
+}
+.sideParItemActive{
+    -fx-background-color :  #489ef4;   
+    -fx-text-fill: white; 
+}
+.textField{
+    -fx-padding: 5 25 5 25;
+    -fx-border-color: #383560;
+    
+}
+.saveButton{
+     -fx-background-color : #489ef4; 
+     -fx-text-fill: white; 
+}
+.cancelButton{
+     -fx-background-color : tomato; 
+     -fx-text-fill: white; 
+}
+.saveButton:hover{
+     -fx-background-color : #7fbdfa; 
+     -fx-text-fill: white; 
+}
+.cancelButton:hover{
+     -fx-background-color : #f79c63; 
+     -fx-text-fill: white; 
+}
+.createBtn{
+    -fx-background-color :#726bfa;
+    -fx-text-fill: white; 
+}
+.createBtn:hover{
+    -fx-background-color : #9c96ff;
+        -fx-text-fill: white; 
+
+}
+.updateBtn{
+   -fx-background-color : #0098fa;
+       -fx-text-fill: white; 
+
+}
+.updateBtn:hover{
+   -fx-background-color : #7ccafc;
+       -fx-text-fill: white; 
+
+}
+.deleteBtn{
+   -fx-background-color : #de4e00;
+       -fx-text-fill: white; 
+
+}
+.deleteBtn:hover{
+   -fx-background-color : #cf6227;
+       -fx-text-fill: white; 
+
+}
+.showAllBtn{
+   -fx-background-color :  #363f70;
+       -fx-text-fill: white; 
+
+}
+.showAllBtn:hover{
+   -fx-background-color : #6358f5;
+       -fx-text-fill: white; 
+
+}

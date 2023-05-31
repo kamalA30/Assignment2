@@ -1,0 +1,60 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 16, 2023, 4:50:57 PM
+    Author     : Yahya
+*/
+
+Label , RadioButton , CheckBox{
+    -fx-text-alignment : center;
+    -fx-font-size :16;
+    -fx-font-weight : bold;
+    -fx-text-fill: black;
+}
+
+TextField , PasswordField{
+    -fx-padding: 5 25 5 25;
+    -fx-border-color: darkblue;
+    
+}
+.btn{
+    -fx-padding: 10 25 10 25;
+    -fx-background-color: blue;
+    -fx-border-radius: 10; 
+    -fx-font-size :14;
+    -fx-text-fill: white;
+    -fx-font-weight : bold;
+
+
+}
+.btn:hover{
+   -fx-background-color: deepskyblue;
+
+}
+.stackPane{
+    -fx-background-color : linear-gradient(to bottom right, darkblue, deepskyblue);
+    -fx-alignment: center;
+    -fx-text-fill: white;
+}
+.stackPane Label{
+    -fx-text-fill: white;
+}
+
+.darkMode {
+    -fx-background-color: #36393e ;
+}
+
+.darkMode CheckBox{
+    -fx-text-fill: white;
+}
+  
+.darkMode Label{
+    -fx-text-fill: white;
+}
+.darkMode RadioButton{
+    -fx-text-fill: white;
+}
+

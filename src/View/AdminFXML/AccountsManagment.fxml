@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="1024.0" style="-fx-background-color: #d1d1cd;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.AccountsManagmentController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="620.0" prefWidth="207.0" styleClass="sidePar" stylesheets="@../../css/admin.css">
+         <children>
+            <Label alignment="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="42.0" prefWidth="162.0" text="Admin Dashboard" textFill="#b8d9f8">
+               <effect>
+                  <Glow level="0.33" />
+               </effect>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="usersManagmentPageBtn" alignment="BASELINE_LEFT" layoutY="186.0" mnemonicParsing="false" onAction="#showUsersManagmentPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItem" stylesheets="@../../css/admin.css" text="Users">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="accountsPageBtn" alignment="BASELINE_LEFT" layoutY="235.0" mnemonicParsing="false" onAction="#showAccountsPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItemActive" stylesheets="@../../css/admin.css" text="Accounts">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="operationsPageBtn" alignment="BASELINE_LEFT" layoutY="284.0" mnemonicParsing="false" onAction="#showOperationsPage" prefHeight="49.0" prefWidth="207.0" styleClass="sideParItem" stylesheets="@../../css/admin.css" text="Operations">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#000000b2" height="28.29" radius="36.225" width="118.61" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="228.0" layoutY="64.0" prefHeight="506.0" prefWidth="779.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+         <children>
+            <Button fx:id="createNewAccountrBtn" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#showAccountCreationPage" prefHeight="42.0" prefWidth="169.0" styleClass="createBtn" stylesheets="@../../css/admin.css" text="+ Create new account">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="showAllAccountsBtn" layoutX="14.0" layoutY="105.0" mnemonicParsing="false" onAction="#showAllAccounts" prefHeight="42.0" prefWidth="156.0" styleClass="showAllBtn" stylesheets="@../../css/admin.css" text="Show All Accounts">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TableView layoutX="14.0" layoutY="164.0" prefHeight="233.0" prefWidth="598.0">
+               <columns>
+                  <TableColumn prefWidth="44.0" text="Id" />
+                  <TableColumn prefWidth="130.0" text="Account number" />
+                  <TableColumn prefWidth="125.0" text="User Name" />
+                  <TableColumn prefWidth="74.0" text="Currency" />
+                  <TableColumn prefWidth="87.0" text="Balance" />
+                  <TableColumn prefWidth="138.0" text="Creation Date" />
+               </columns>
+            </TableView>
+            <Button fx:id="updateSelectedAccountBtn" layoutX="14.0" layoutY="410.0" mnemonicParsing="false" onAction="#updateSelectedAccount" prefHeight="42.0" prefWidth="118.0" styleClass="updateBtn" stylesheets="@../../css/admin.css" text="Update">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteSelectedAccountBtn" layoutX="141.0" layoutY="410.0" mnemonicParsing="false" onAction="#deleteSelectedAccount" prefHeight="42.0" prefWidth="118.0" styleClass="deleteBtn" stylesheets="@../../css/admin.css" text="Delete">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <HBox layoutX="357.0" layoutY="105.0" prefHeight="36.0" prefWidth="255.0">
+               <children>
+                  <TextField fx:id="accontSearchTF" prefHeight="36.0" prefWidth="187.0" promptText="Account number" styleClass="textField" stylesheets="@../../css/admin.css" />
+                  <Button fx:id="searchAccountBtn" mnemonicParsing="false" onAction="#searchForAnAccount" prefHeight="36.0" prefWidth="67.0" styleClass="showAllBtn" stylesheets="@../../css/admin.css" text="Search">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <Label layoutX="233.0" layoutY="13.0" prefHeight="42.0" prefWidth="194.0" text="Accounts Managment" textFill="#838383">
+         <effect>
+            <Glow level="0.45" />
+         </effect>
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

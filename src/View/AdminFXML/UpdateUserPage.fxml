@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="504.0" prefWidth="459.0" style="-fx-background-color: #e1e8f2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.UpdateUserPageController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="6.0" prefHeight="488.0" prefWidth="444.0" style="-fx-background-color: white; -fx-background-radius: 40px;">
+         <children>
+            <Label layoutX="132.0" layoutY="14.0" prefHeight="46.0" prefWidth="210.0" text="Update User" textFill="#3f4c6f">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Label layoutX="72.0" layoutY="120.0" prefHeight="46.0" prefWidth="143.0" text="User name :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="166.0" prefHeight="46.0" prefWidth="143.0" text="Password :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="212.0" prefHeight="46.0" prefWidth="143.0" text="Email :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="269.0" prefHeight="46.0" prefWidth="119.0" text="Gender :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="323.0" prefHeight="46.0" prefWidth="119.0" text="Role :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameTF" layoutX="188.0" layoutY="124.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <TextField fx:id="passwordTF" layoutX="188.0" layoutY="170.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <TextField fx:id="emailTF" layoutX="188.0" layoutY="216.0" styleClass="textField" stylesheets="@../../css/admin.css" />
+            <RadioButton fx:id="maleRadio" layoutX="188.0" layoutY="284.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="93.0" selected="true" text="Male">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="genderGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="femaleRadio" layoutX="282.0" layoutY="284.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="93.0" text="Female" toggleGroup="$genderGroup">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="userRadio" layoutX="188.0" layoutY="334.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="93.0" selected="true" text="User">
+               <toggleGroup>
+                  <ToggleGroup fx:id="roleGroup" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="adminRadio" layoutX="282.0" layoutY="334.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="93.0" text="Admin" toggleGroup="$roleGroup">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <Button fx:id="updateUserBtn" layoutX="108.0" layoutY="411.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="25.0" prefWidth="119.0" styleClass="saveButton" stylesheets="@../../css/admin.css" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelBtn" layoutX="233.0" layoutY="411.0" mnemonicParsing="false" onAction="#cancelCreation" prefHeight="25.0" prefWidth="119.0" styleClass="cancelButton" stylesheets="@../../css/admin.css" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
